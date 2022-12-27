@@ -1,3 +1,4 @@
+import React , {Component} from "react";
 
 // Bootstrap CSS
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -7,25 +8,27 @@ import "bootstrap/dist/js/bootstrap.bundle.min";
 import './style.css';
 import './App.css';
 
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {Route , Routes} from 'react-router-dom';
 
-import Header from "./components/Header"
-import Mainsec from "./components/Mainsec"
-import Services from "./components/Services"
-import StartProject from "./components/StartProject"
-import Contact from "./components/Contact"
-import Footer from "./components/Footer"
+import MainPage from "./routres/MainPage";
+import Categories from "./routres/Categories";
 
-function App() {
-  return (
-    <div>
-        <Header />
-        <Mainsec />
-        <Services />
-        <StartProject />
-        <Contact />
-        <Footer />
-    </div>
-  );
+class App extends Component {
+  state = {  } 
+  render() { 
+    return (
+
+      <React.Fragment>
+
+            <Routes>
+              <Route path='/bad-bugs/categories' element={<Categories />}/>
+              <Route path='/bad-bugs' element={<MainPage />}/>
+              
+            </Routes>
+        </React.Fragment>
+    );
+  }
 }
-
+ 
 export default App;
