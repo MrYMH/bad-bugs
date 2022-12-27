@@ -68,11 +68,14 @@ body {
     transform: translateX(-50%);
 }
 .card-item {
+    flex-wrap: wrap;
     border: 2px solid #2c51b6;
     border-radius: 5px;
-    width: 300px;
-    margin: 5px 20px;
+    max-width: 250px;
+    height: 25rem;
+    margin: 1rem 0.9rem;
     transition: 0.3s ease-in-out;
+    
 
 }
 .card-item:hover {
@@ -83,7 +86,10 @@ body {
 .icons {
     color: #2c51b6;
 }
-
+.icon-x{
+    width: 5rem;
+    height: 5rem;
+}
 /* start animation in features */
 @keyframes myAnim {
 	0% {
@@ -164,3 +170,17 @@ footer a:hover {
     color: rgb(0, 193, 252);
 }
 /* End Footer */
+
+
+.category{
+    width: 20rem;
+    margin: 1rem 1rem;
+    border: none !important;
+}
+.categories{
+    flex-wrap: wrap;
+}
+
+.img-card{
+    width: 100%;
+}
